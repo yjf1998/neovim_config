@@ -89,6 +89,10 @@ let g:vimtex_complete_img_use_tail = 1
 map tt :NERDTreeToggle<CR>
 
 " Ultisnips Configuration
-let g:UltiSnipsExpandTrigger="<c-b>"
-let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsSnippetDirectories=[$HOME.'/.config/nvim/UltiSnips', 'UltiSnips']
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-e>"
+let g:UltiSnipsJumpBackwardTrigger="<c-e>"
+
+
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"

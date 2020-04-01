@@ -1,0 +1,203 @@
+snippet "lab(el?)" "label" ir
+\label{$1}
+endsnippet
+
+snippet ql "quad" iA
+\quad $0
+endsnippet
+
+snippet qql "qquad" iA
+\qquad $0
+endsnippet
+
+snippet ul "underline" i
+\uline{$1}$0
+endsnippet
+
+snippet ref "ref" w
+\ref{${1:reference}} $0
+endsnippet
+
+snippet eqr "eqref" iA
+\eqref{eq:${1:equation}} $0
+endsnippet
+
+
+#snippet * "Individual item" bA
+#\item$0
+#endsnippet
+
+snippet cb "colorbox"
+\colorbox{${1:yellow}}{${2:text}}
+$0
+endsnippet
+
+snippet ct "colortext"
+{\color{${1:red}}${2:text}} $0
+endsnippet
+
+snippet rmk "remark" 
+\begin{remark}
+	$0
+\end{remark}
+endsnippet
+snippet note "note" 
+\begin{note}
+	$0
+\end{note}
+endsnippet
+
+snippet eg "example" 
+\begin{example}
+	$0
+\end{example}
+endsnippet
+
+snippet thm "theorem" 
+\begin{theorem}[$1]
+	$2
+\end{theorem}
+$0
+endsnippet
+
+snippet lma "lemma" 
+\begin{lemma}[$1]
+	$2
+\end{lemma}
+$0
+endsnippet
+
+snippet cor "corollary" 
+\begin{corollary}[$1]
+	$2
+\end{corollary}
+$0
+endsnippet
+
+snippet def "definition" 
+\begin{definition}[$1]
+	$2
+\end{definition}
+$0
+endsnippet
+
+snippet proof "proof" 
+\begin{proof}
+	$0
+\end{proof}
+endsnippet
+
+snippet templatemath "math template"
+\documentclass[11pt]{article}
+\usepackage{graphicx}
+%\usepackage{times}
+%\usepackage{mathptmx}
+\usepackage{amsmath}
+\usepackage{authblk}
+\usepackage{geometry}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+\usepackage{multirow}
+\usepackage{tikz}
+\usepackage{dynkin-diagrams}
+\usetikzlibrary{matrix,arrows,decorations.pathmorphing}
+\geometry{scale=0.9}
+\usepackage{amsthm}
+\usepackage{thmtools}
+\usepackage[ CJKbookmarks=true,
+bookmarksnumbered=true,
+bookmarksopen=true,
+colorlinks,
+linkcolor=blue,
+anchorcolor=green,
+citecolor=blue
+]{hyperref}
+\theoremstyle{plain}
+\newtheorem{thm}{Theorem}[subsection]%
+\newtheorem{prop}[thm]{Proposition}%
+\newtheorem{lma}[thm]{Lemma}%
+\newtheorem{cor}[thm]{Corollary}
+\theoremstyle{definition}
+\newtheorem{define}[thm]{Definition}%
+\newtheorem{eg}[thm]{Example}%
+\newtheorem*{rmk}{Remark}
+\setlength{\parindent}{0pt}
+\begin{document}
+\title{Notes}
+\author{Yuan Jiangfan}
+\date{}
+\affil{Shanghai Jiao Tong University}
+\maketitle
+
+\end{document}
+endsnippet
+
+snippet lr "left( right)" i
+\left( ${1:${VISUAL}} \right) $0
+endsnippet
+
+snippet lr( "left( right)" i
+\left( ${1:${VISUAL}} \right) $0
+endsnippet
+
+snippet lr| "left| right|" i
+\left| ${1:${VISUAL}} \right| $0
+endsnippet
+
+snippet lr{ "left\{ right\}" i
+\left\\{ ${1:${VISUAL}} \right\\} $0
+endsnippet
+
+snippet lrb "left\{ right\}" i
+\left\\{ ${1:${VISUAL}} \right\\} $0
+endsnippet
+
+snippet lr[ "left[ right]" i
+\left[ ${1:${VISUAL}} \right] $0
+endsnippet
+
+snippet lra "leftangle rightangle" iA
+\left<${1:${VISUAL}} \right>$0
+endsnippet
+
+snippet frac "fraction"
+\frac{$1}{$2}$0
+endsnippet
+
+snippet int "integral" w
+\int_{${1:-\infty} }^{${2:\infty} } ${3:f(x) }\dd{${4:x}}  $0
+endsnippet
+
+snippet intlim "integral" w
+\int\limits_{ ${1:\Gamma_{AB}} } ${2:\mathbf{A} \cdot \mathbf(T)^0} \dd ${3:s} $0
+endsnippet
+
+snippet sum "sum" w
+\sum_{${1:k=1}}^{${2:n}} ${3:a_{i}}
+endsnippet
+
+snippet lim "limit" w
+\lim_{${1:\Delta x} \to ${2:0}} $0
+endsnippet
+
+snippet wt "widetilde"
+\widetilde{${1:A}} $0
+endsnippet
+
+snippet bf "textbf"
+\textbf{${1:sometext}} $0
+endsnippet
+
+snippet bb "mathbb"
+\mathbb{${1:C}} $0
+endsnippet
+ 
+snippet cal "mathcal"
+\mathcal{${1:C}} $0
+endsnippet
+ 
+snippet frak "mathfrak"
+\mathfrak{${1:C}} $0
+endsnippet
+
