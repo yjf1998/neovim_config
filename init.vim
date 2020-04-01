@@ -95,4 +95,4 @@ let g:UltiSnipsJumpForwardTrigger="<c-e>"
 let g:UltiSnipsJumpBackwardTrigger="<c-e>"
 
 
-let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
