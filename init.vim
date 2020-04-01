@@ -3,7 +3,7 @@ noremap l h
 noremap ; j
 noremap p k
 noremap ' l
-noremap <LEADER><CR> :nohlsearch<CR>
+noremap <c-f><CR> :nohlsearch<CR>
 
 map s <nop>
 map S :w<CR>
