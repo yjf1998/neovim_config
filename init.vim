@@ -21,6 +21,7 @@ set showcmd
 set wildmenu
 set cul
 
+set linebreak
 
 set encoding=utf-8
 filetype plugin indent on "open file type dection
