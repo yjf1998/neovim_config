@@ -36,6 +36,8 @@ snippet ct "colortext"
 {\color{${1:red}}${2:text}} ${0}
 endsnippet
 
+#some environments
+
 snippet rmk "remark" 
 \begin{rmk}
 	${0}
@@ -90,16 +92,16 @@ snippet beg "environment"
 \end{${1:environment}}
 endsnippet
 
-snippet equation "equation"
+snippet eq "equation"
 \begin{equation}
 ${0}
 \end{equation}
 endsnippet
 
-snippet equation* "equation*"
+snippet eq* "equation*"
 \begin{equation*}
 ${0}
-\end{equation}
+\end{equation*}
 endsnippet
 
 snippet aligned "aligned"
@@ -167,15 +169,15 @@ snippet { "bracket" i
 endsnippet
 
 snippet _ "underline" 
-_{${1}} ${0}
+${1:A}_{ ${2}} ${0}
 endsnippet
 
 snippet ^ "^" 
-^{${1}} ${0}
+${1:A}^{ ${2}} ${0}
 endsnippet
 
 snippet $ "dollar"
-$${1}$ ${0}
+$ ${1}$ ${0}
 endsnippet
 
 snippet lr "left( right)" i
@@ -250,12 +252,20 @@ snippet mfrak "mathfrak"
 \mathfrak{${1:C}} ${0}
 endsnippet
 
+snippet lm "lambda"
+\lambda ${0}
+endsnippet
+
+snippet om_ "omega"
+\lambda_{${1}} ${0} 
+endsnippet
+
 snippet om "omega"
 \omega ${0}
 endsnippet
 
 snippet om_ "omega"
-\omega_ ${0}
+\omega_{${1}} ${0} 
 endsnippet
 
 snippet a "alpha"
@@ -263,7 +273,7 @@ snippet a "alpha"
 endsnippet
 
 snippet a_ "alpha"
-\alpha_ ${0}
+\alpha_{${1}} ${0}
 endsnippet
 
 snippet b "beta"
@@ -271,7 +281,7 @@ snippet b "beta"
 endsnippet
 
 snippet b_ "beta"
-\beta_ ${0}
+\beta_{${1}} ${0}
 endsnippet
 
 snippet ga "gamma"
@@ -290,6 +300,14 @@ snippet opp "oplus"
 \oplus_{${1:i=1}}^{${2:n}} ${0}
 endsnippet
 
+snippet Op "oplus"
+\bigoplus ${0}
+endsnippet
+
+snippet Opp "oplus"
+\bigoplus_{${1:i=1}}^{${2:n}} ${0}
+endsnippet
+
 snippet ot "otimes"
 \otimes ${0}
 endsnippet
@@ -298,12 +316,24 @@ snippet ott "otimes"
 \otimes_{${1:k}} ${0}
 endsnippet
 
+snippet ot "otimes"
+\bigotimes ${0}
+endsnippet
+
+snippet ott "otimes"
+\bigotimes_{${1:k}} ${0}
+endsnippet
+
 snippet th "theta"
 \theta${0}
 endsnippet
 
 snippet Th "Theta"
 \Theta${0}
+endsnippet
+
+snippet fa "forall"
+\forall ${0}
 endsnippet
 
 snippet opn "operatorname"
@@ -323,8 +353,10 @@ snippet mto "mapsto"
 endsnippet
 
 snippet ss "subsetin"
-\subsetin ${0}
+\subseteq ${0}
 endsnippet
+
+#abbreviation of words
 
 snippet rep "representation"
 representation ${0}
@@ -332,5 +364,9 @@ endsnippet
 
 snippet irrep "irreducible rep"
 irreducible representation ${0}
+endsnippet
+
+snippet st "such that"
+such that ${0}
 endsnippet
 
