@@ -10,6 +10,8 @@ map S :w<CR>
 map Q :q<CR>
 map R :source ~/.config/nvim/init.vim<CR> 
 map K \ll
+map T \le
+map M <Leader>lv
 map :goyo :Goyo
 
 let mapleader=" "
@@ -65,6 +67,9 @@ Plug 'junegunn/goyo.vim'
 " OceanNext Theme
 Plug 'mhartington/oceanic-next'
 
+" Vimtex-conceal
+Plug 'PietroPate/vim-tex-conceal'
+
 call plug#end()
 
 " Color Scheme
@@ -79,20 +84,24 @@ colorscheme OceanicNext
 " Setting of vimtex 
 let g:tex_flavor                     = 'latex'
 let g:tex_indent_items                    = 0
-let g:Tex_DefaultTargetFormat        = 'pdf'                                                    
-let g:Tex_CompileRule_pdf = 'xelatex -src-specials -synctex=1 -interaction=nonstopmode $*'   
-let g:Tex_FormatDependency_pdf        = 'pdf'
-let g:vimtex_view_method = 'general'
-let g:vimtex_enabled = 1
-let g:vimtex_complete_img_use_tail = 1
+let g:Tex_DefaultTargetFormat='pdf'                                              
+let g:Tex_CompileRule_pdf='xelatex -src-specials -synctex=1 -interaction=nonstopmode $*'   
+let g:Tex_FormatDependency_pdf='pdf'
+let g:vimtex_view_method='skim'
+let g:livepreview_previewer = 'open -a Skim'
+let g:vimtex_enabled=1
+let g:vimtex_quickfix_mode=0
+set conceallevel=2
+let g:tex_conceal='abdmg'
+" Notice that \le is for error checking in vimtex
 
 " NerdTree
-map tt :NERDTreeToggle<CR>
+map nt :NERDTreeToggle<CR>
 
 " Ultisnips Configuration
 let g:UltiSnipsSnippetDirectories=[$HOME.'/.config/nvim/UltiSnips', 'UltiSnips']
 let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<tab>"
-let g:UltiSnipsJumpBackwardTrigger="<c-e>"
+let g:UltiSnipsJumpForwardTrigger="<c-e>"
+let g:UltiSnipsJumpBackwardTrigger="<c-b>"
 
 
