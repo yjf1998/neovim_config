@@ -1,0 +1,629 @@
+snippet "lab(el?)" "label" ir
+\label{${1}}
+endsnippet
+
+snippet ql "quad" iA
+\quad ${0}
+endsnippet
+
+snippet qql "qquad" iA
+\qquad ${0}
+endsnippet
+
+snippet ul "underline" i
+\uline{${1}}${0}
+endsnippet
+
+snippet ref "ref" w
+\ref{${1:reference}} ${0}
+endsnippet
+
+snippet eqr "eqref" iA
+\eqref{eq:${1:equation}} ${0}
+endsnippet
+
+
+#snippet * "Individual item" bA
+#\item${0}
+#endsnippet
+
+snippet cb "colorbox"
+\colorbox{${1:yellow}}{${2:text}}
+${0}
+endsnippet
+
+snippet ct "colortext"
+{\color{${1:red}}${2:text}} ${0}
+endsnippet
+
+#some environments
+
+snippet rmk "remark" 
+\begin{rmk}
+${0}
+\end{rmk}
+endsnippet
+
+snippet note "note" 
+\begin{note}
+${0}
+\end{note}
+endsnippet
+
+snippet eg "example" 
+\begin{eg}
+${0}
+\end{eg}
+endsnippet
+
+snippet thm "theorem" 
+\begin{thm}
+${0}
+\end{thm}
+endsnippet
+
+snippet lma "lemma" 
+\begin{lma}
+${0}
+\end{lma}
+endsnippet
+
+snippet prop "lemma" 
+\begin{prop}
+${0}
+\end{prop}
+endsnippet
+
+snippet cor "corollary" 
+\begin{cor}
+${0}
+\end{cor}
+endsnippet
+
+snippet def "definition" 
+\begin{define}
+${0}
+\end{define}
+endsnippet
+
+snippet proof "proof" 
+\begin{proof}
+${0}
+\end{proof}
+endsnippet
+
+snippet beg "environment"
+\begin{${1:environment}}
+${0}
+\end{${1:environment}}
+endsnippet
+
+snippet eq "equation"
+\begin{equation}
+${0}
+\end{equation}
+endsnippet
+
+snippet eq* "equation*"
+\begin{equation*}
+${0}
+\end{equation*}
+endsnippet
+
+snippet aligned "aligned"
+\begin{aligned}
+${0}
+\end{aligned}
+endsnippet
+
+snippet us "underline-upsubcript"
+${1:A}_{${2:m}}^{${3:n}} ${0}
+endsnippet
+
+
+snippet ( "bracket" i
+(${1}) ${0}
+endsnippet
+
+snippet { "bracket" i
+{${1}} ${0}
+endsnippet
+
+snippet _ "underline" 
+${1:A}_{ ${2}} ${0}
+endsnippet
+
+snippet ^ "^" 
+${1:A}^{ ${2}} ${0}
+endsnippet
+
+snippet $ "dollar" i
+$ ${1}$ ${0}
+endsnippet
+
+snippet kt "ket"
+\ket{${1:\Psi}}${0}
+endsnippet
+
+snippet lr "left( right)" i
+\left( ${1:${VISUAL}} \right) ${0}
+endsnippet
+
+snippet lr( "left( right)" i
+\left( ${1:${VISUAL}} \right) ${0}
+endsnippet
+
+snippet 2( "double bracket" 
+(\!( ${1:${VISUAL}} )\!) ${0}
+endsnippet
+
+snippet lr| "left| right|" iA
+\left| ${1:${VISUAL}} \right| ${0}
+endsnippet
+
+snippet lrb "left\{ right\}" iA
+\left\\{ ${1:${VISUAL}} \right\\} ${0}
+endsnippet
+
+snippet lr[ "left[ right]" iA
+\left[ ${1:${VISUAL}} \right] ${0}
+endsnippet
+
+snippet 2[ "double square bracket" 
+[\![ ${1:${VISUAL}} ]\!] ${0}
+endsnippet
+
+snippet lra "leftangle rightangle" iA
+\left<${1:${VISUAL}} \right>${0}
+endsnippet
+
+snippet frac "fraction" iA
+\frac{${1:1}}{${2:n}} ${0}
+endsnippet
+
+snippet int "integral" w
+\int_{${1:-\infty} }^{${2:\infty} } ${3:f(x) }\dd{${4:x}}  ${0}
+endsnippet
+
+snippet intlim "integral" w
+\int\limits_{ ${1:\Gamma_{AB}} } ${2:\mathbf{A} \cdot \mathbf(T)^0} \dd ${3:s} ${0}
+endsnippet
+
+snippet sum "sum" w
+\sum_{${1:k=1}}^{${2:n}} ${3:a_{i}}
+endsnippet
+
+snippet lim "limit" w
+\lim_{${1:\Delta x} \to ${2:0}} ${0}
+endsnippet
+
+snippet til "tilde"
+\tilde{${1:A}} ${0}
+endsnippet
+
+snippet wt "widetilde"
+\widetilde{${1:A}} ${0}
+endsnippet
+
+snippet bf "textbf"
+\textbf{${1:sometext}} ${0}
+endsnippet
+
+snippet mbf "mathbf" iA
+\mathbf{${1:x}} ${0}
+endsnippet
+
+snippet mbb "mathbb" iA
+\mathbb{${1:C}}${0}
+endsnippet
+
+snippet bbm "mathbbm" iA
+\mathbbm{${1:1}}${0}
+endsnippet
+  
+snippet mcal "mathcal" iA
+\mathcal{${1:C}}${0}
+endsnippet
+ 
+snippet mfk "mathfrak" iA
+\mathfrak{${1:g}}${0}
+endsnippet
+
+snippet lm "lambda"
+\lambda ${0}
+endsnippet
+
+snippet lm_ "lambda"
+\lambda_{${1}} ${0} 
+endsnippet
+
+snippet om "omega"
+\omega${0}
+endsnippet
+
+snippet om_ "omega"
+\omega_{${1}} ${0} 
+endsnippet
+
+snippet a "alpha"
+\alpha${0}
+endsnippet
+
+snippet a_ "alpha"
+\alpha_{${1}} ${0}
+endsnippet
+
+snippet b "beta"
+\beta${0}
+endsnippet
+
+snippet b_ "beta"
+\beta_{${1}} ${0}
+endsnippet
+
+snippet ga "gamma"
+\gamma${0}
+endsnippet
+
+snippet Ga "Gamma"
+\Gamma${0}
+endsnippet
+
+snippet ph "phi"
+\phi${0}
+endsnippet
+
+snippet vph "varphi"
+\varphi${0}
+endsnippet
+
+snippet ka "kappa"
+\kappa${0}
+endsnippet
+
+snippet op "oplus"
+\oplus${0}
+endsnippet
+
+snippet opp "oplus"
+\oplus_{${1:i=1}}^{${2:n}} ${0}
+endsnippet
+
+snippet Op "oplus"
+\bigoplus${0}
+endsnippet
+
+snippet Opp "oplus"
+\bigoplus_{${1:i=1}}^{${2:n}} ${0}
+endsnippet
+
+snippet ot "otimes"
+\otimes${0}
+endsnippet
+
+snippet ott "otimes"
+\otimes_{${1:k}} ${0}
+endsnippet
+
+snippet Ot "otimes"
+\bigotimes${0}
+endsnippet
+
+snippet Ott "otimes"
+\bigotimes_{${1:k}} ${0}
+endsnippet
+
+snippet vq "vecQ"
+\vec{Q}${0}
+endsnippet
+
+snippet th "theta"
+\theta${0}
+endsnippet
+
+snippet Th "Theta"
+\Theta${0}
+endsnippet
+
+snippet fa "forall"
+\forall ${0}
+endsnippet
+
+snippet opn "operatorname" iA
+\operatorname{${1:some text}}${0}
+endsnippet
+
+snippet gal "Galois"
+\operatorname{Gal}(${1:L}/${2:K}) ${0}
+endsnippet
+
+snippet spec "spectrum"
+\operatorname{Spec} ${1:X}${0}
+endsnippet
+
+snippet map "map X to Y"
+${1:\varphi}: ${2:X} \to ${3:Y} ${0}
+endsnippet
+
+snippet lrt "longrightarrow" iA
+\longrightarrow ${0}
+endsnippet
+
+snippet llft "longleftarrow"
+\longleftarrow ${0}
+endsnippet
+
+snippet mto "mapsto" iA
+\mapsto${0}
+endsnippet
+
+snippet ss "subsetin"
+\subseteq ${0}
+endsnippet
+
+snippet dlcc
+R_{\textbf{T},\tilde{\textbf{U}}}^{\textbf{G}}(\theta) ${0}
+endsnippet
+
+snippet dlcc'
+R_{\textbf{T}',\tilde{\textbf{U}'}}^{\textbf{G}}(\theta') ${0}
+endsnippet
+
+snippet dlc
+R_{${1:\textbf{T}},${2:\theta}}^{\textbf{G}} ${0}
+endsnippet
+
+snippet ind
+\operatorname{Ind}_{${1:H}}^{${2:G}} ${0}
+endsnippet
+
+snippet indbf
+\operatorname{Ind}_{${1:\textbf{H}}}^{${2:\textbf{G}}} ${0}
+endsnippet
+
+snippet 1gf
+\frac{1}{\left|\textbf{G}^F\right|} ${0}
+endsnippet
+
+snippet 1tf
+\frac{1}{\left|\textbf{T}^F\right|} ${0}
+endsnippet
+
+snippet tf
+\textbf{T}^F ${0}
+endsnippet
+
+snippet gf
+\textbf{G}^F ${0}
+endsnippet
+
+snippet green
+Q_{ ${1:\textbf{T}} }^{ ${2:\textbf{G}} }(u) ${0}
+endsnippet
+
+snippet levi 
+R_{ ${1:\textbf{L}}}^{ ${2:\textbf{G}}} ${0}
+endsnippet
+
+snippet adlevi 
+^{*}R_{ ${1:\textbf{L}}}^{ ${2:\textbf{G}}} ${0}
+endsnippet
+
+snippet stb
+\operatorname{ \textbf{St}}
+endsnippet 
+
+snippet rkgp
+\varepsilon_{\textbf{${1:G}}} ${0}
+endsnippet
+
+snippet # "sharp"
+${1:f}^{\sharp} ${0}
+endsnippet
+
+snippet bft 
+\textbf{T}
+endsnippet
+
+snippet bfg
+\textbf{G}
+endsnippet
+
+snippet sp
+\operatorname{Sp}_{${1:2n}} ${0}
+endsnippet
+
+snippet so
+\operatorname{SO}_{${1:2m}}^{${2:\epsilon}} ${0}
+endsnippet
+
+snippet on
+\operatorname{O}_{${1:2m}}^{${2:\epsilon}} ${0}
+endsnippet
+
+snippet les "Long exact sequence"  
+${1:0} \longrightarrow ${2:A} \longrightarrow ${3:B} \longrightarrow ${4:C} \longrightarrow ${1:0} ${0} 
+endsnippet
+
+snippet ses "short exact sequence"  
+${1:A} \longrightarrow ${2:B} \longrightarrow ${3:C} ${0} 
+endsnippet
+
+snippet leftes "Left exact sequence"  
+${1:0} \longrightarrow ${2:A} \longrightarrow ${3:B} \longrightarrow ${4:C} ${0} 
+endsnippet
+
+snippet rightes "Long exact sequence"  
+${2:A} \longrightarrow ${3:B} \longrightarrow ${4:C} \longrightarrow ${1:0} ${0} 
+endsnippet
+
+#abbreviation of words
+
+snippet rep "representation"
+representation ${0}
+endsnippet
+
+snippet irrep "irreducible rep"
+irreducible representation ${0}
+endsnippet
+
+snippet decom
+decomposation${0}
+endsnippet
+
+snippet st "such that"
+such that ${0}
+endsnippet
+
+snippet rie "Riemannian"
+Riemannian ${0}
+endsnippet
+
+snippet et "etale"
+étale ${0}
+endsnippet
+
+snippet iff "if and only if"
+if and only if ${0}
+endsnippet
+
+snippet homo "homomorphism"
+homomorphism${0}
+endsnippet
+
+snippet va "vertex algebra"
+vertex algebra${0}
+endsnippet
+
+snippet iso "isomorphism"
+isomorphism${0}
+endsnippet
+
+snippet holo "holomorphic"
+holomorphic ${0}
+endsnippet
+
+snippet cat "category"
+category ${0}
+endsnippet
+
+snippet poly "polynomial"
+polynomial ${0}
+endsnippet
+
+snippet tikzgraph "tikzpic for graph theory"
+\begin{figure}[ht!]
+	\centering
+	\scalebox{0.8} {
+\begin{tikzpicture}  
+  [auto=center, line width=1.5pt]    
+  \node[style={circle,fill=blue!20}] (a1) at (0,0) {1};  
+  \node[style={circle,fill=blue!20}] (a2) at (3,0)  {1};  
+  \node[style={circle,fill=blue!20}] (a3) at (1.5,1.5)  {-2};  
+ 
+  \draw[red] (a1) -- (a2); % these are the straight lines from one vertex to another  
+  \draw[red] (a2) edge node[above] {$e$} (a3);  
+  \draw (a1) -- (a3);  
+\end{tikzpicture}}
+\caption{figure} 
+\end{figure}
+endsnippet
+
+snippet tikzq "tikzquiver"
+\begin{tikzpicture}  [baseline=-2pt]
+\node(a1) at (0,0) {$\bullet$ };  
+\node(a2) at (1.5,0){$\bullet$ };  
+\node(a3) at (0,-0.4){$1$ };  
+\node(a4) at (1.5,-0.4){$2$ };  
+%\node(a3) at (1.5,0.4){$\mathbf{k} $};  
+\draw[pil] (a1) edge [bend left=20]  (a2);
+\draw[pil] (a1) edge [bend right=20]  (a2);
+%\draw[pil] (a1) edge [loop] (a1);
+\end{tikzpicture}
+endsnippet
+
+snippet template "math template"
+\documentclass[10pt]{article} 
+\usepackage{graphicx}
+\usepackage{times}
+%\usepackage{mathptmx}
+\usepackage{amsmath}
+\usepackage{authblk}
+\usepackage{geometry}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+\usepackage{multirow}
+\usepackage{tikz}
+\usetikzlibrary{arrows,positioning} 
+\tikzset{
+    >=stealth',
+    %Define style for boxes
+    punkt/.style={
+           rectangle,
+           rounded corners,
+           draw=black, very thick,
+           text width=6.5em,
+           minimum height=2em,
+           text centered
+   },
+    % Define arrow style
+    pil/.style={
+           ->,
+           thick,
+	   line width=1.5pt,
+           shorten <=2pt,
+           shorten >=2pt,
+	   >=stealth,
+   }
+}
+\usepackage{dynkin-diagrams}
+\usepackage{quiver}
+\usetikzlibrary{matrix,arrows,decorations.pathmorphing}
+\geometry{scale=0.85}
+\usepackage{setspace}
+\renewcommand{\baselinestretch}{1.2}
+
+\usepackage[backend=biber,style=alphabetic,sorting=nyt]{biblatex}
+\addbibresource{thesis.bib}
+
+\usepackage{amsthm}
+\usepackage{thmtools}
+\usepackage[ CJKbookmarks=true,
+bookmarksnumbered=true,
+bookmarksopen=true,
+colorlinks,
+linkcolor=blue,
+anchorcolor=green,
+citecolor=blue
+]{hyperref}
+\theoremstyle{plain}
+\newtheorem{thm}{Theorem}[section]%
+\newtheorem{prop}[thm]{Proposition}%
+\newtheorem{lma}[thm]{Lemma}%
+\newtheorem{cor}[thm]{Corollary}
+\theoremstyle{definition}
+\newtheorem{define}[thm]{Definition}%
+\newtheorem{eg}[thm]{Example}%
+\newtheorem*{rmk}{Remark}
+\newtheorem*{notation}{Remark}
+\setlength{\parindent}{0pt}
+\begin{document}
+\title{Notes}
+\author{Yuan Jiangfan}
+\date{}
+\affil{}
+\maketitle
+
+\pagenumbering{Roman}
+\tableofcontents
+\clearpage
+
+\pagenumbering{arabic}
+
+\nocite{*}
+\printbibliography
+
+\end{document}
+endsnippet
+
