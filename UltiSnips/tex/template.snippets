@@ -1,0 +1,118 @@
+snippet notetemplate "math template"
+\documentclass[10pt]{article} 
+\usepackage{graphicx}
+\usepackage{times}
+%\usepackage{mathptmx}
+\usepackage{amsmath}
+\usepackage{authblk}
+\usepackage{geometry}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+\usepackage{multirow}
+\usepackage{tikz}
+\usetikzlibrary{arrows,positioning} 
+\tikzset{
+    >=stealth',
+    %Define style for boxes
+    punkt/.style={
+           rectangle,
+           rounded corners,
+           draw=black, very thick,
+           text width=6.5em,
+           minimum height=2em,
+           text centered
+   },
+    % Define arrow style
+    pil/.style={
+           ->,
+           thick,
+	   line width=1.5pt,
+           shorten <=2pt,
+           shorten >=2pt,
+	   >=stealth,
+   }
+}
+\usepackage{dynkin-diagrams}
+\usepackage{quiver}
+\usetikzlibrary{matrix,arrows,decorations.pathmorphing}
+\geometry{scale=0.85}
+\usepackage{setspace}
+\renewcommand{\baselinestretch}{1.2}
+\usepackage{xcolor}
+
+\usepackage[backend=biber,style=alphabetic,sorting=nyt]{biblatex}
+\addbibresource{thesis.bib}
+
+\usepackage{amsthm}
+\usepackage{thmtools}
+\usepackage[ CJKbookmarks=true,
+bookmarksnumbered=true,
+bookmarksopen=true,
+colorlinks,
+linkcolor=blue,
+anchorcolor=green,
+citecolor=blue
+]{hyperref}
+\theoremstyle{plain}
+\newtheorem{thm}{Theorem}[section]%
+\newtheorem{prop}[thm]{Proposition}%
+\newtheorem{lma}[thm]{Lemma}%
+\newtheorem{cor}[thm]{Corollary}
+\theoremstyle{definition}
+\newtheorem{define}[thm]{Definition}%
+\newtheorem{eg}[thm]{Example}%
+\newtheorem*{rmk}{Remark}
+\newtheorem*{notation}{Remark}
+\setlength{\parindent}{0pt}
+\begin{document}
+\title{Notes}
+\author{Yuan Jiangfan}
+\date{}
+\affil{}
+\maketitle
+
+\pagenumbering{Roman}
+\tableofcontents
+\clearpage
+
+\pagenumbering{arabic}
+
+\nocite{*}
+\printbibliography
+
+\end{document}
+endsnippet
+
+snippet tikzgraph "tikzpic for graph theory"
+\begin{figure}[ht!]
+	\centering
+	\scalebox{0.8} {
+\begin{tikzpicture}  
+  [auto=center, line width=1.5pt]    
+  \node[style={circle,fill=blue!20}] (a1) at (0,0) {1};  
+  \node[style={circle,fill=blue!20}] (a2) at (3,0)  {1};  
+  \node[style={circle,fill=blue!20}] (a3) at (1.5,1.5)  {-2};  
+ 
+  \draw[red] (a1) -- (a2); % these are the straight lines from one vertex to another  
+  \draw[red] (a2) edge node[above] {$e$} (a3);  
+  \draw (a1) -- (a3);  
+\end{tikzpicture}}
+\caption{figure} 
+\end{figure}
+endsnippet
+
+snippet tikzq "tikzquiver"
+\begin{tikzpicture}  [baseline=-2pt]
+\node(a1) at (0,0) {$\bullet$ };  
+\node(a2) at (1.5,0){$\bullet$ };  
+\node(a3) at (0,-0.4){$1$ };  
+\node(a4) at (1.5,-0.4){$2$ };  
+%\node(a3) at (1.5,0.4){$\mathbf{k} $};  
+\draw[pil] (a1) edge [bend left=20]  (a2);
+\draw[pil] (a1) edge [bend right=20]  (a2);
+%\draw[pil] (a1) edge [loop] (a1);
+\end{tikzpicture}
+endsnippet
+
+

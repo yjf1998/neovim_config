@@ -117,8 +117,8 @@ map nt :NERDTreeToggle<CR>
 " Ultisnips Configuration
 let g:UltiSnipsSnippetDirectories=[$HOME.'/.config/nvim/UltiSnips', 'UltiSnips']
 let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<c-e>"
-let g:UltiSnipsJumpBackwardTrigger="<c-b>"
+let g:UltiSnipsJumpForwardTrigger="<c-j>"
+let g:UltiSnipsJumpBackwardTrigger="<c-k>"
 
 "Conquer of Completion
 let g:coc_global_extensions = [
@@ -195,7 +195,6 @@ endif
   let g:which_key_use_floating_win = 0
 
 " SINGLE MAPPINGS
-let g:which_key_map['e'] = [ ':CocCommand explorer'  , 'explorer' ]
 let g:which_key_map['q'] = [ ':wqa!'                  , 'quit' ]
 let g:which_key_map['w'] = [ ':w'                    , 'write' ]
 let g:which_key_map['b'] = [ 'VimtexCompile'         , 'build' ]

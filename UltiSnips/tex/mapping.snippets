@@ -22,7 +22,6 @@ snippet eqr "eqref" iA
 \eqref{eq:${1:equation}} ${0}
 endsnippet
 
-
 #snippet * "Individual item" bA
 #\item${0}
 #endsnippet
@@ -33,7 +32,7 @@ ${0}
 endsnippet
 
 snippet ct "colortext"
-{\color{${1:red}}${2:text}} ${0}
+{\color{${1:red}}${2:text}}${0}
 endsnippet
 
 #some environments
@@ -117,28 +116,28 @@ ${0}
 endsnippet
 
 snippet us "underline-upsubcript"
-${1:A}_{${2:m}}^{${3:n}} ${0}
+${1:A}_{${2:m}}^{${3:n}}${0}
 endsnippet
 
 
 snippet ( "bracket" i
-(${1}) ${0}
+(${1})${0}
 endsnippet
 
 snippet { "bracket" i
-{${1}} ${0}
+{${1}}${0}
 endsnippet
 
 snippet _ "underline" 
-${1:A}_{ ${2}} ${0}
+${1:A}_{${2}}${0}
 endsnippet
 
 snippet ^ "^" 
-${1:A}^{ ${2}} ${0}
+${1:A}^{${2}}${0}
 endsnippet
 
 snippet $ "dollar" i
-$ ${1}$ ${0}
+$${1}$${0}
 endsnippet
 
 snippet kt "ket"
@@ -146,71 +145,71 @@ snippet kt "ket"
 endsnippet
 
 snippet lr "left( right)" i
-\left( ${1:${VISUAL}} \right) ${0}
+\left(${1}\right)${0}
 endsnippet
 
-snippet lr( "left( right)" i
-\left( ${1:${VISUAL}} \right) ${0}
-endsnippet
-
-snippet 2( "double bracket" 
-(\!( ${1:${VISUAL}} )\!) ${0}
+snippet double( "double bracket" 
+(\!(${1})\!)${0}
 endsnippet
 
 snippet lr| "left| right|" iA
-\left| ${1:${VISUAL}} \right| ${0}
+\left|${1}\right| ${0}
+endsnippet
+
+snippet double| "absolute value" 
+|\!|${1}|\!|${0}
 endsnippet
 
 snippet lrb "left\{ right\}" iA
-\left\\{ ${1:${VISUAL}} \right\\} ${0}
+\left\\{${1}\right\\}${0}
 endsnippet
 
 snippet lr[ "left[ right]" iA
-\left[ ${1:${VISUAL}} \right] ${0}
+\left[${1}\right] ${0}
 endsnippet
 
-snippet 2[ "double square bracket" 
-[\![ ${1:${VISUAL}} ]\!] ${0}
+snippet double[ "double square bracket" 
+[\![${1}]\!] ${0}
 endsnippet
 
 snippet lra "leftangle rightangle" iA
-\left<${1:${VISUAL}} \right>${0}
+\left<${1}\right>${0}
 endsnippet
 
 snippet frac "fraction" iA
-\frac{${1:1}}{${2:n}} ${0}
+\frac{${1:1}}{${2:n}}${0}
 endsnippet
 
 snippet int "integral" w
-\int_{${1:-\infty} }^{${2:\infty} } ${3:f(x) }\dd{${4:x}}  ${0}
+\int_{${1:-\infty} }^{${2:\infty} } ${3:f(x) }\dd{${4:x}}${0}
 endsnippet
 
 snippet intlim "integral" w
-\int\limits_{ ${1:\Gamma_{AB}} } ${2:\mathbf{A} \cdot \mathbf(T)^0} \dd ${3:s} ${0}
+\int\limits_{ ${1:\Gamma_{AB}} } ${2:\mathbf{A} \cdot \mathbf(T)^0} \dd ${3:s}${0}
 endsnippet
 
 snippet sum "sum" w
-\sum_{${1:k=1}}^{${2:n}} ${3:a_{i}}
+\sum_{${1:k=1}}^{${2:n}}${3:a_{i}}${0}
 endsnippet
 
 snippet lim "limit" w
-\lim_{${1:\Delta x} \to ${2:0}} ${0}
+\lim_{${1:\Delta x} \to ${2:0}}${0}
 endsnippet
 
 snippet til "tilde"
-\tilde{${1:A}} ${0}
+\tilde{${1:A}}${0}
 endsnippet
 
 snippet wt "widetilde"
-\widetilde{${1:A}} ${0}
+\widetilde{${1:A}}${0}
 endsnippet
 
 snippet bf "textbf"
-\textbf{${1:sometext}} ${0}
+\textbf{${1:sometext}}${0}
 endsnippet
 
 snippet mbf "mathbf" iA
-\mathbf{${1:x}} ${0}
+\mathbf{${1:x}}${0}
 endsnippet
 
 snippet mbb "mathbb" iA
@@ -229,6 +228,10 @@ snippet mfk "mathfrak" iA
 \mathfrak{${1:g}}${0}
 endsnippet
 
+snippet mrm "mathrm" iA
+\mathrm{${1:G}}${0}
+endsnippet
+
 snippet lm "lambda"
 \lambda ${0}
 endsnippet
@@ -242,7 +245,7 @@ snippet om "omega"
 endsnippet
 
 snippet om_ "omega"
-\omega_{${1}} ${0} 
+\omega_{${1}}${0} 
 endsnippet
 
 snippet a "alpha"
@@ -250,7 +253,7 @@ snippet a "alpha"
 endsnippet
 
 snippet a_ "alpha"
-\alpha_{${1}} ${0}
+\alpha_{${1}}${0}
 endsnippet
 
 snippet b "beta"
@@ -258,7 +261,7 @@ snippet b "beta"
 endsnippet
 
 snippet b_ "beta"
-\beta_{${1}} ${0}
+\beta_{${1}}${0}
 endsnippet
 
 snippet ga "gamma"
@@ -361,6 +364,10 @@ snippet ss "subsetin"
 \subseteq ${0}
 endsnippet
 
+snippet decat "derived category" 
+\mathrm{D}^{${1:b}} (${2:X}, ${3})${0}
+endsnippet
+
 snippet dlcc
 R_{\textbf{T},\tilde{\textbf{U}}}^{\textbf{G}}(\theta) ${0}
 endsnippet
@@ -430,19 +437,19 @@ snippet bfg
 endsnippet
 
 snippet sp
-\operatorname{Sp}_{${1:2n}} ${0}
+\operatorname{Sp}_{${1:2n}}${0}
 endsnippet
 
 snippet so
-\operatorname{SO}_{${1:2m}}^{${2:\epsilon}} ${0}
+\operatorname{SO}_{${1:2m}}^{${2:\epsilon}}${0}
 endsnippet
 
 snippet on
-\operatorname{O}_{${1:2m}}^{${2:\epsilon}} ${0}
+\operatorname{O}_{${1:2m}}^{${2:\epsilon}}${0}
 endsnippet
 
 snippet les "Long exact sequence"  
-${1:0} \longrightarrow ${2:A} \longrightarrow ${3:B} \longrightarrow ${4:C} \longrightarrow ${1:0} ${0} 
+${1:0} \longrightarrow ${2:A} \longrightarrow ${3:B} \longrightarrow ${4:C} \longrightarrow ${1:0}${0} 
 endsnippet
 
 snippet ses "short exact sequence"  
@@ -455,175 +462,5 @@ endsnippet
 
 snippet rightes "Long exact sequence"  
 ${2:A} \longrightarrow ${3:B} \longrightarrow ${4:C} \longrightarrow ${1:0} ${0} 
-endsnippet
-
-#abbreviation of words
-
-snippet rep "representation"
-representation ${0}
-endsnippet
-
-snippet irrep "irreducible rep"
-irreducible representation ${0}
-endsnippet
-
-snippet decom
-decomposation${0}
-endsnippet
-
-snippet st "such that"
-such that ${0}
-endsnippet
-
-snippet rie "Riemannian"
-Riemannian ${0}
-endsnippet
-
-snippet et "etale"
-étale ${0}
-endsnippet
-
-snippet iff "if and only if"
-if and only if ${0}
-endsnippet
-
-snippet homo "homomorphism"
-homomorphism${0}
-endsnippet
-
-snippet va "vertex algebra"
-vertex algebra${0}
-endsnippet
-
-snippet iso "isomorphism"
-isomorphism${0}
-endsnippet
-
-snippet holo "holomorphic"
-holomorphic ${0}
-endsnippet
-
-snippet cat "category"
-category ${0}
-endsnippet
-
-snippet poly "polynomial"
-polynomial ${0}
-endsnippet
-
-snippet tikzgraph "tikzpic for graph theory"
-\begin{figure}[ht!]
-	\centering
-	\scalebox{0.8} {
-\begin{tikzpicture}  
-  [auto=center, line width=1.5pt]    
-  \node[style={circle,fill=blue!20}] (a1) at (0,0) {1};  
-  \node[style={circle,fill=blue!20}] (a2) at (3,0)  {1};  
-  \node[style={circle,fill=blue!20}] (a3) at (1.5,1.5)  {-2};  
- 
-  \draw[red] (a1) -- (a2); % these are the straight lines from one vertex to another  
-  \draw[red] (a2) edge node[above] {$e$} (a3);  
-  \draw (a1) -- (a3);  
-\end{tikzpicture}}
-\caption{figure} 
-\end{figure}
-endsnippet
-
-snippet tikzq "tikzquiver"
-\begin{tikzpicture}  [baseline=-2pt]
-\node(a1) at (0,0) {$\bullet$ };  
-\node(a2) at (1.5,0){$\bullet$ };  
-\node(a3) at (0,-0.4){$1$ };  
-\node(a4) at (1.5,-0.4){$2$ };  
-%\node(a3) at (1.5,0.4){$\mathbf{k} $};  
-\draw[pil] (a1) edge [bend left=20]  (a2);
-\draw[pil] (a1) edge [bend right=20]  (a2);
-%\draw[pil] (a1) edge [loop] (a1);
-\end{tikzpicture}
-endsnippet
-
-snippet template "math template"
-\documentclass[10pt]{article} 
-\usepackage{graphicx}
-\usepackage{times}
-%\usepackage{mathptmx}
-\usepackage{amsmath}
-\usepackage{authblk}
-\usepackage{geometry}
-\usepackage{amssymb}
-\usepackage{amsfonts}
-\usepackage{mathrsfs}
-\usepackage{multirow}
-\usepackage{tikz}
-\usetikzlibrary{arrows,positioning} 
-\tikzset{
-    >=stealth',
-    %Define style for boxes
-    punkt/.style={
-           rectangle,
-           rounded corners,
-           draw=black, very thick,
-           text width=6.5em,
-           minimum height=2em,
-           text centered
-   },
-    % Define arrow style
-    pil/.style={
-           ->,
-           thick,
-	   line width=1.5pt,
-           shorten <=2pt,
-           shorten >=2pt,
-	   >=stealth,
-   }
-}
-\usepackage{dynkin-diagrams}
-\usepackage{quiver}
-\usetikzlibrary{matrix,arrows,decorations.pathmorphing}
-\geometry{scale=0.85}
-\usepackage{setspace}
-\renewcommand{\baselinestretch}{1.2}
-
-\usepackage[backend=biber,style=alphabetic,sorting=nyt]{biblatex}
-\addbibresource{thesis.bib}
-
-\usepackage{amsthm}
-\usepackage{thmtools}
-\usepackage[ CJKbookmarks=true,
-bookmarksnumbered=true,
-bookmarksopen=true,
-colorlinks,
-linkcolor=blue,
-anchorcolor=green,
-citecolor=blue
-]{hyperref}
-\theoremstyle{plain}
-\newtheorem{thm}{Theorem}[section]%
-\newtheorem{prop}[thm]{Proposition}%
-\newtheorem{lma}[thm]{Lemma}%
-\newtheorem{cor}[thm]{Corollary}
-\theoremstyle{definition}
-\newtheorem{define}[thm]{Definition}%
-\newtheorem{eg}[thm]{Example}%
-\newtheorem*{rmk}{Remark}
-\newtheorem*{notation}{Remark}
-\setlength{\parindent}{0pt}
-\begin{document}
-\title{Notes}
-\author{Yuan Jiangfan}
-\date{}
-\affil{}
-\maketitle
-
-\pagenumbering{Roman}
-\tableofcontents
-\clearpage
-
-\pagenumbering{arabic}
-
-\nocite{*}
-\printbibliography
-
-\end{document}
 endsnippet
 
